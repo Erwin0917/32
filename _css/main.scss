@@ -1,0 +1,446 @@
+$blue_main: #29abe2;
+$footer-subHeader-color: #333333;
+
+
+$trans: all 0.3s ease-out;
+
+
+
+
+@mixin center(){
+    left:50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+body{
+    font-family: 'Catamaran', sans-serif;
+    color: back;
+    font-size: 10px;
+}
+h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 50px;
+    &::after{
+        content: "";
+        height: 4px;
+        width: 40%;
+        position: absolute;
+        background-color: $blue_main;
+        left: 0;
+        bottom: 0;
+        min-width: 60px;
+    }
+}
+
+.flexWrap{
+    display: flex;
+    
+}
+
+
+
+
+// ---- SMALL NAV -----
+
+.smallNav{      
+    a{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: medium;
+        &:hover{
+            text-decoration: underline;
+            background-color: transparent;
+        }
+    }
+    li{
+        display: inline-block;
+        margin-right: 25px;
+    }
+}
+
+
+
+
+
+// ----- SUB HEADER -----
+
+.subHeader{
+    background-color: $footer-subHeader-color;
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .smallNav{
+        flex: 1 1 70%;
+        padding-left: 10px;
+    }
+    .socialNav{
+
+        position: absolute;
+        right: 0;
+        li{
+            display: inline-block;
+        }
+        a{
+            color: white;
+            display: block;
+            font-size: 1.5rem;
+            margin-right: 7px;
+            transition: $trans;
+            &:hover{
+                color: $blue_main;
+            }
+        }
+    }
+}
+
+
+// ----- HEADER -----
+ h1.logo{
+        font-size: 5.5rem;
+        font-weight: 900;
+        display: inline-block;
+        margin: 30px auto;
+        position: relative;
+        @include center;
+
+        span{
+            font-size: 2.4rem;
+            font-weight: 200;
+        }
+        &::before{
+            content: "";
+            background-color: $blue_main;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            position: absolute;
+            top: 39px;
+            left: -17px;
+        }
+    }
+.mainHeader{
+    border-bottom: 2px solid #b3b3b3;
+   
+    .container{
+        display: flex;
+    }
+}
+
+
+.mainNav{
+    padding-bottom: 10px;
+    flex: 1 1 90%;
+    ul{
+        list-style: none;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        padding-left: 0;
+    }
+    li{
+        display: inline-block;
+        margin-right: 15px;
+        
+    }
+    a{
+        font-size: 1.4rem;
+        color: black;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 7px 10px;
+        border-bottom: 5px solid transparent;
+        transition: $trans;
+        &:hover{
+            text-decoration: none;
+            color: $blue_main;
+            border-bottom: 3px solid $blue_main;
+        }
+    }
+}
+.search{
+    display: inline-block;
+    
+    
+    .searchHover{
+        cursor: pointer;
+        transition: $trans;
+        font-size: 1.8rem;
+        margin-top: 7px;
+        &:hover{
+            color: $blue_main;
+        }
+    }
+}
+
+
+
+
+
+//SLIDER
+
+
+.containerSlider{
+    height: 490px;
+    background-image: url(../_img/slider.jpg);
+    background-size: cover;
+    position: relative;
+    
+    .container-fluid{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 157px;
+            width: 20%;
+            background-color: white;
+        }
+    }
+}
+.sliderCaption{
+    background-color: white;
+    padding-left: 15px;
+    
+    h4{
+        font-size: 1.4rem;
+        font-weight: 100;
+        margin-bottom: 10px;
+    }
+    p{
+       font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 10px;
+        line-height: 1.2;
+    }
+}
+
+
+// CONTENT
+
+.content, .articleWrap{
+    padding: 90px 10px;
+    
+    .thumb{
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    article{
+        min-height: 390px;
+        margin-bottom: 40px;
+        position: relative;
+        transition: $trans;
+        transform: scale(1);
+        z-index: 80;
+        &:hover{
+            background-color: $blue_main;
+            transform: scale(1.1);
+            z-index: 100;
+            a{
+                color: white;
+            }
+        }
+        a{
+            color: black;
+            transition: $trans;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    .art-01 .thumb{
+    background-image: url(../_img/art1.jpg);
+    }
+    .art-02 .thumb{
+    background-image: url(../_img/art2.jpg);
+    }
+    .art-03 .thumb{
+    background-image: url(../_img/art3.jpg);
+    }
+    .art-04 .thumb{
+    background-image: url(../_img/art4.jpg);
+    }
+    .art-05 .thumb{
+    background-image: url(../_img/art5.jpg);
+    }
+    .art-06 .thumb{
+    background-image: url(../_img/art6.jpg);
+    }
+    .articleTitle{
+        font-size: 1.8rem;
+        line-height: 1.2;
+        
+    }
+    .articleMeta{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        width: 100%;
+        max-width: 363px;
+    }
+    
+}
+
+
+
+// PICTURES
+
+.pictures{
+    background-color: #f2f2f2;
+    padding-bottom: 100px;
+    
+    .row{
+        div .thumb{
+            height: 240px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            &::before, &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                transition: $trans;
+                background-size: cover;
+            }
+            &::before{
+                background-image: url(../_img/pic-bg.png);
+                height: 100%;
+                width: 100%;
+                top: 0;
+                opacity: 0;
+            }
+            &::after{
+                background-image: url(../_img/pic-ico.png);
+                height: 34px;
+                width: 45px;
+                top: 150%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            &:hover{
+                animation-duration: 0.7s;
+                animation-name: pictureSlide;
+                animation-iteration-count: 1;
+                transform: scale(1.1);
+                &::before{
+                    opacity: 1;
+                }
+                &::after{
+                    top: 50%;
+                }
+            }
+        }
+        @keyframes pictureSlide {
+            0% {
+                transform: scale(1);
+            }
+            20%{
+                transform: scale(0.8);
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+        
+        .pic1 .thumb{
+           background-image: url(../_img/pic1.jpg);
+        }
+        .pic2 .thumb{
+           background-image: url(../_img/pic2.jpg);
+        }
+        .pic3 .thumb{
+           background-image: url(../_img/pic3.jpg);
+        }
+        
+    }
+    
+    h2{
+        display: block;
+        text-align: center;
+        &::after{
+            display: none;
+        }
+    }
+    
+    
+    
+    
+}
+.articleWrap{
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    
+    .articleParagra{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .articleMeta{
+        max-width: 355px;
+    }
+    .health{
+        article{
+            min-height: auto;
+        }
+        .articleMeta{
+            position: relative;
+        }
+    }
+    .economy{
+        .art-01 .thumb{
+            background-image: url(../_img/eco1.jpg);
+        }
+        .art-02 .thumb{
+            background-image: url(../_img/eco2.jpg);
+        }
+        .art-03 .thumb{
+            background-image: url(../_img/eco3.jpg);
+        }
+        .art-04 .thumb{
+            background-image: url(../_img/eco4.jpg);
+        }
+    }
+    
+    
+    }
+
+// FOOTER
+
+.footerWrap{
+    background-color: $footer-subHeader-color;
+    ul{
+        padding: 15px 0;
+    }
+    .copyR{
+        padding: 15px 0;
+        color: white;
+        font-size: 1.2rem;
+        span{
+            color: $blue_main;
+        }
+    }
+}
+
+
+
+
+
+
+
