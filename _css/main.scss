@@ -45,7 +45,9 @@ h2{
     display: flex;
     
 }
-
+.menuBtn{
+    display: none;
+}
 
 
 
@@ -517,7 +519,109 @@ h2{
 
 
 
+@media (min-width: 992px){
+    
+    .content .articleMeta, .articleWrap .articleMeta{
+        max-width: 293px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}
 
+@media (min-width: 768px){
+    
+    .mainNav{
+        li{
+            margin-right: 5px;
+        }
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    .content .articleMeta, .articleWrap .articleMeta{
+        max-width: 350px;
+    }
+    .health .articleMeta{
+        max-width: 100%;
+    }
+    .mainNav li .subMenu-container{
+        top: 214px;
+    }
+}
+
+@media (max-width: 767px){
+    
+    .content .articleMeta, .articleWrap .articleMeta{
+      max-width: 95%;   
+    }
+    .subHeader .smallNav{
+        display: none;
+    }
+    .subHeader .socialNav{
+        position: relative;
+        left: 0;
+        margin: 10px auto;
+        padding: 0;
+    }
+    .search{
+        display: none;
+    }
+    .mainNav li i{
+        display: none;
+    }
+    .subMenu-container{
+        display: none;
+    }
+    .mainNav{
+        transition: $trans;
+        ul{
+            flex-wrap: wrap;
+        }
+        li{
+            display: block;
+            flex: 1 1 100%;
+            text-align: center;
+            margin: 7px 0;
+            a{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .closeMenuMobile{
+        overflow: hidden;
+        height: 2px;
+    }
+    .mainHeader{
+        .container{
+            flex-wrap: wrap;
+        }
+    }
+    .menuBtn{
+        display: inline-block;
+        flex: 1 1 70%;
+        font-size: 1.8rem;
+        background-color: white;
+        border: 1px solid $blue_main;
+        padding: 3px 0;
+        color: $blue_main;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}
 
 
 
