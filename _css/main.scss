@@ -366,7 +366,7 @@ h2{
                 animation-duration: 0.7s;
                 animation-name: pictureSlide;
                 animation-iteration-count: 1;
-                transform: scale(1.1);
+                transform: scale(1.05);
                 &::before{
                     opacity: 1;
                 }
@@ -380,10 +380,10 @@ h2{
                 transform: scale(1);
             }
             20%{
-                transform: scale(0.85);
+                transform: scale(0.9);
             }
             100%{
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
         
