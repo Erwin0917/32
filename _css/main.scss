@@ -161,25 +161,53 @@ h2{
         .subMenu-container{
             position: absolute;
             background-color: $footer-subHeader-color;
-            width: 100vw;
-            left: 0;
+            width: 100%;
+            left: -300px;
             z-index: 300;
             height: 500px;
             top: 217px;
             box-sizing: border-box;
             padding: 0;
             margin: 0;
-            max-width: 100vw;
-            display: block;
+            visibility: hidden;
             overflow: hidden;
-            
+            opacity: 0;
+            transition: $trans;
             a{
                 color: white;
             }
+            .row{
+            .col-md-4{
+                height: 320px;
+                margin-top: 80px;
+                p{
+                    font-size: 1.8rem;
+                    color: white;
+                    font-weight: bold;
+                }
+                
+            }
+            .art01, .art02, .art03{
+                    .subMenu--thumb{
+                        background-image: url(../_img/subMenu-img.jpg);
+                        background-size: cover;
+                        height: 245px;
+                        width: auto;
+                    }
+                
+                &:hover{
+                    p{
+                        color: $blue_main;
+                    }
+                }
+                }
+        }
         }
         &:hover{
             .subMenu-container{
-                display: block;
+                visibility: visible;
+                opacity: 1;
+                left: 0;
             }
         }
     }
@@ -197,7 +225,28 @@ h2{
             border-bottom: 3px solid $blue_main;
         }
     }
+    .subMenu{
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1170px;
+        display: block;
+        li{
+            margin-right: 50px;
+            margin-top: 45px;
+            padding-left: 5px;
+            padding-right: 5px;
+            
+            &:hover{
+                a{
+                    border-color: transparent;
+                    color: $blue_main;
+                }
+            }
+        }
+           
+    }
 }
+
 .search{
     display: inline-block;
     
